@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Primary */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  /* Neutral */
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  background-size: cover;
+}
+
+body {
+  background-color: var(--dark-cyan);
+  position: relative;
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body::after {
+  content: "aaa";
+  position: absolute;
+  top: -40%;
+  left: -50%;
+  background-image: url("../images/bg-pattern-top.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  background-image: url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  display: grid;
+  height: 25rem;
+  box-shadow: 10px 8px 17px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 8px 17px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 8px 17px -7px rgba(0, 0, 0, 0.75);
+}
+
+.card__info-details {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.user__img {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%);
+  /* padding: 1rem; */
+  border: 0.4rem solid white;
+}
+
+.user__img img {
+  border-radius: 50%;
+}
+
+.user__name__age {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 10rem;
+  line-height: 1;
+}
+
+.user__name__age h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.user__name__age span {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+}
+
+.user__city {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: var(--dark-gray);
+}
+
+.user__statistics {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40%;
+  width: 100%;
+  margin-top: 2rem;
+  border-top: 1px solid var(--dark-gray);
+  text-align: center;
+}
+
+.user__statistics h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.user__statistics span {
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: var(--dark-gray);
+  letter-spacing: 1.5px;
+}
